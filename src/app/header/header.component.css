@@ -1,0 +1,49 @@
+.search-bar {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    transition: box-shadow 0.3s ease;
+  }
+  .search-bar:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  .form-label { font-weight: 600; color: #495057; }
+  .price-range-output { font-weight: bold; color: #17a2b8; }
+  .btn-custom {
+    background-color: #17a2b8;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  .btn-custom:hover {
+    background-color: #138496;
+    transform: translateY(-2px);
+  }
+  .row-centered { display: flex; justify-content: center; gap: 1rem; }
+
+  /*header Styling*/
+  .logo{
+    color: white;
+    font-weight: 700;
+  }
+  .nav-link ,.btn1{
+    color: white;
+    font-weight: 500;
+  }
+  .nav-link:hover{
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    transition: 0.5s;
+  }
+  .btn1:hover{
+    background-color: white;
+    color: black;
+  }
+  

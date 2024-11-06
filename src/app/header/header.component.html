@@ -1,0 +1,81 @@
+<div class="container-fluid p-3 bg-primary ">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 ">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="" class="logo fs-3 font-weight-bolder text-decoration-none">TravelMore.Com</a>
+      </div>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 ">Home</a></li>
+        <li><a href="#" class="nav-link px-2 ">Resturants</a></li>
+        <li><a href="#" class="nav-link px-2">Hotels</a></li>
+        <li><a href="#" class="nav-link px-2">Villas</a></li>
+        <li><a href="#" class="nav-link px-2">Apartments</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-primary btn1">List Property</button>
+        <button type="button" class="btn btn-primary btn1">Register</button>
+      </div>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label for="location" class="form-label">Location</label>
+                <select class="form-select rounded-pill" id="location">
+                  <option selected>Select Location</option>
+                  <option value="1">Location 1</option>
+                  <option value="2">Location 2</option>
+                  <option value="3">Location 3</option>
+                </select>
+              </div>
+      
+              <div class="col-md-4">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select rounded-pill" id="category" style="border: none;">
+                  <option selected>Select Category</option>
+                  <option value="hotel">Hotels</option>
+                  <option value="apartment">Apartments</option>
+                  <option value="villa">Villas</option>
+                  <option value="restaurant">Restaurants</option>
+                </select>
+              </div>
+      
+              <div class="col-md-4">
+                <label for="bedrooms" class="form-label">Bedrooms</label>
+                <select class="form-select rounded-pill" id="bedrooms">
+                  <option selected>Select Bedrooms</option>
+                  <option value="1">1 Bedroom</option>
+                  <option value="2">2 Bedrooms</option>
+                  <option value="3">3 Bedrooms</option>
+                  <option value="4">4+ Bedrooms</option>
+                </select>
+              </div>
+      
+              <div class="col-md-4">
+                <label for="checkinDate" class="form-label">Check-in Date</label>
+                <input type="date" class="form-control rounded-pill" id="checkinDate" onchange="updateCheckOutMinDate()">
+              </div>
+      
+              <div class="col-md-4">
+                <label for="checkoutDate" class="form-label">Check-out Date</label>
+                <input type="date" class="form-control rounded-pill" id="checkoutDate">
+              </div>
+      
+              <div class="col-md-4">
+                <label for="priceRange" class="form-label">Price Pre-Night (Rs.)</label>
+                <input type="range" class="form-range" min="1000" max="300000" step="1000" id="priceRange" oninput="updatePriceOutput(this.value)">
+                <div class="price-range-output mt-2">Rs. <span id="priceOutput">1000</span></div>
+              </div>
+            </div>
+      
+            <div class="row mt-4 row-centered">
+              <button type="submit" class="btn btn-custom">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+  </div>
+ 
