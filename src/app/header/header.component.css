@@ -42,8 +42,9 @@
     border-radius: 8px;
     transition: 0.5s;
   }
-  .btn1:hover{
+  .btn1{
     background-color: white;
     color: black;
+    margin-left: 10px;
   }
   
