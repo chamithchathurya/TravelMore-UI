@@ -1,0 +1,48 @@
+<div class="container my-5">
+    <div class="card shadow-lg border-0 rounded">
+      <div class="card-header bg-primary text-white">
+        <h4 class="text-center mb-0">List Your Hotel</h4>
+      </div>
+      <div class="card-body p-5">
+        <form>
+          <!-- Common Fields -->
+          <div class="form-group mb-4">
+            <label for="hotelName" class="font-weight-bold">Hotel Name</label>
+            <input type="text" class="form-control" id="hotelName" placeholder="Enter hotel name" required>
+          </div>
+          <!-- Unique Hotel Fields -->
+          <div class="form-group mb-4">
+            <label class="font-weight-bold">Star Rating</label>
+            <select class="form-control" id="starRating">
+              <option>1 Star</option>
+              <option>2 Stars</option>
+              <option>3 Stars</option>
+              <option>4 Stars</option>
+              <option>5 Stars</option>
+            </select>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="roomService">
+            <label class="form-check-label" for="roomService">Room Service</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="conferenceFacilities">
+            <label class="form-check-label" for="conferenceFacilities">Conference Facilities</label>
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="spa">
+            <label class="form-check-label" for="spa">Spa</label>
+          </div>
+          <!-- Image Upload -->
+        <div class="form-group mb-4">
+            <label for="imageUpload" class="font-weight-bold">Upload Images</label>
+            <input type="file" class="form-control-file" id="imageUpload" multiple>
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

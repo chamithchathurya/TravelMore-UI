@@ -1,0 +1,42 @@
+<div class="container my-5">
+    <div class="card shadow-lg border-0 rounded">
+      <div class="card-header bg-primary text-white">
+        <h4 class="text-center mb-0">List Your Restaurant</h4>
+      </div>
+      <div class="card-body p-5">
+        <form>
+          <!-- Common Fields -->
+          <div class="form-group mb-4">
+            <label for="restaurantName" class="font-weight-bold">Restaurant Name</label>
+            <input type="text" class="form-control" id="restaurantName" placeholder="Enter restaurant name" required>
+          </div>
+          <!-- Unique Restaurant Fields -->
+          <div class="form-group mb-4">
+            <label for="cuisineType" class="font-weight-bold">Cuisine Type</label>
+            <input type="text" class="form-control" id="cuisineType" placeholder="Enter cuisine type (e.g., Italian, Chinese)">
+          </div>
+          <div class="form-group mb-4">
+            <label for="seatingCapacity" class="font-weight-bold">Seating Capacity</label>
+            <input type="number" class="form-control" id="seatingCapacity" placeholder="Enter seating capacity" required>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="outdoorSeating">
+            <label class="form-check-label" for="outdoorSeating">Outdoor Seating</label>
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="deliveryOptions">
+            <label class="form-check-label" for="deliveryOptions">Delivery Options</label>
+          </div>
+          <!-- Image Upload -->
+        <div class="form-group mb-4">
+            <label for="imageUpload" class="font-weight-bold">Upload Images</label>
+            <input type="file" class="form-control-file" id="imageUpload" multiple>
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

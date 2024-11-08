@@ -1,0 +1,68 @@
+<div class="container my-5">
+  <div class="card shadow-lg border-0 rounded">
+    <div class="card-header bg-primary text-white">
+      <h4 class="text-center mb-0">List Your Apartment</h4>
+    </div>
+    <div class="card-body p-5">
+      <form>
+        <!-- Apartment Name -->
+        <div class="form-group mb-4">
+          <label for="apartmentName" class="font-weight-bold">Apartment Name</label>
+          <input type="text" class="form-control" id="apartmentName" placeholder="Enter apartment name" required>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group mb-4">
+          <label for="description" class="font-weight-bold">Description</label>
+          <textarea class="form-control" id="description" rows="3" placeholder="Brief description of the apartment" required></textarea>
+        </div>
+
+        <!-- Price -->
+        <div class="form-group mb-4">
+          <label for="price" class="font-weight-bold">Price per Night</label>
+          <input type="number" class="form-control" id="price" placeholder="Enter price per night" required>
+        </div>
+
+        <!-- Location -->
+        <div class="form-group mb-4">
+          <label for="location" class="font-weight-bold">Location</label>
+          <input type="text" class="form-control" id="location" placeholder="Enter location" required>
+        </div>
+
+        <!-- Amenities (Checkboxes) -->
+        <div class="form-group mb-4">
+          <label class="font-weight-bold">Amenities</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="wifi" name="amenities">
+            <label class="form-check-label" for="wifi">Wi-Fi</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="parking" name="amenities">
+            <label class="form-check-label" for="parking">Parking</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="pool" name="amenities">
+            <label class="form-check-label" for="pool">Swimming Pool</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gym" name="amenities">
+            <label class="form-check-label" for="gym">Gym</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ac" name="amenities">
+            <label class="form-check-label" for="ac">Air Conditioning</label>
+          </div>
+        </div>
+
+        <!-- Image Upload -->
+        <div class="form-group mb-4">
+          <label for="imageUpload" class="font-weight-bold">Upload Images</label>
+          <input type="file" class="form-control-file" id="imageUpload" multiple>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
+      </form>
+    </div>
+  </div>
+</div>

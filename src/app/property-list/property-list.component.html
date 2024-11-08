@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
       <a class="navbar-brand fs-3" href="#">TravelMore.Com</a>
@@ -5,17 +6,17 @@
   </nav>
 
   <!-- Main Content -->
-  <div class="main-content container">
+  <div class="main-content container ">
     <h2>List your property on TravelMore and start welcoming guests in no time!</h2>
     <p>To get started, select the type of property you want to list on TravelMore.</p>
 
-    <div class="container d-flex column-gap-2 ">
+    <div class="container d-flex column-gap-2">
       <!-- Restaurant Card -->
       <div class="property-card col-3">
         <img src="https://img.icons8.com/?size=100&id=8050&format=png&color=000000" alt="Restaurant Icon">
         <h3>Restaurant</h3>
         <p>Fine dining and casual eateries to serve delicious meals to your guests.</p>
-        <button class="btn">List your property</button>
+        <button class="btn" (click)="navigateToAddResturent()">List your property</button>
       </div>
 
       <!-- Villas Card -->
@@ -23,7 +24,7 @@
         <img src="https://img.icons8.com/?size=100&id=9zcV0gKAozhn&format=png&color=000000" alt="Villas Icon">
         <h3>Villas</h3>
         <p>Luxury and spacious villas available for guests to enjoy a comfortable stay.</p>
-        <button class="btn">List your property</button>
+        <button class="btn"(click)="navigateToAddVilla()">List your property</button>
       </div>
 
       <!-- Apartment Card -->
@@ -31,7 +32,7 @@
         <img src="https://img.icons8.com/?size=100&id=111425&format=png&color=000000" alt="Apartment Icon">
         <h3>Apartment</h3>
         <p>Furnished and self-catering accommodations where guests rent the entire place.</p>
-        <button class="btn">List your property</button>
+        <button class="btn" (click)="navigateToAddApartment()">List your property</button>
       </div>
 
       <!-- Hotels Card -->
@@ -40,7 +41,7 @@
         <h3>Hotels</h3>
         <p>Properties like hotels, B&Bs, guest houses, hostels, condo hotels, etc.</p>
         <br>
-        <button class="btn">List your property</button>
+        <button class="btn" (click)="navigateToAddHotel()">List your property</button>
       </div>
     </div>
   </div>
