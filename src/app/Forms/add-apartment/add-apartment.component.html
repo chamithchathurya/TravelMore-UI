@@ -4,7 +4,7 @@
       <h4 class="text-center mb-0">List Your Apartment</h4>
     </div>
     <div class="card-body p-5">
-      <form>
+      <form [formGroup]="apartmentForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
         <!-- Apartment Name -->
         <div class="form-group mb-4">
           <label for="apartmentName" class="font-weight-bold">Apartment Name</label>
@@ -57,7 +57,7 @@
         <!-- Image Upload -->
         <div class="form-group mb-4">
           <label for="imageUpload" class="font-weight-bold">Upload Images</label>
-          <input type="file" class="form-control-file" id="imageUpload" multiple>
+          <input type="file" class="form-control-file" (change)="onFileChange($event)" id="imageUpload" multiple>
         </div>
 
         <!-- Submit Button -->
