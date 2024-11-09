@@ -4,64 +4,58 @@
       <h4 class="text-center mb-0">List Your Apartment</h4>
     </div>
     <div class="card-body p-5">
-      <form [formGroup]="apartmentForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <form>
         <!-- Apartment Name -->
         <div class="form-group mb-4">
           <label for="apartmentName" class="font-weight-bold">Apartment Name</label>
-          <input type="text" class="form-control" id="apartmentName" placeholder="Enter apartment name" required>
+          <input type="text" class="form-control" id="apartmentName" name="name" placeholder="Enter apartment name" [(ngModel)]="apartment.name">
         </div>
 
         <!-- Description -->
         <div class="form-group mb-4">
           <label for="description" class="font-weight-bold">Description</label>
-          <textarea class="form-control" id="description" rows="3" placeholder="Brief description of the apartment" required></textarea>
+          <input type="text" class="form-control" id="description" name="description" placeholder="Brief description of the apartment" [(ngModel)]="apartment.description">
         </div>
 
         <!-- Price -->
         <div class="form-group mb-4">
           <label for="price" class="font-weight-bold">Price per Night</label>
-          <input type="number" class="form-control" id="price" placeholder="Enter price per night" required>
+          <input type="number" class="form-control" id="price" name="price" placeholder="Enter price per night" [(ngModel)]="apartment.price">
         </div>
 
         <!-- Location -->
         <div class="form-group mb-4">
           <label for="location" class="font-weight-bold">Location</label>
-          <input type="text" class="form-control" id="location" placeholder="Enter location" required>
+          <input type="text" class="form-control" id="location" name="location" placeholder="Enter location" [(ngModel)]="apartment.location">
         </div>
 
         <!-- Amenities (Checkboxes) -->
         <div class="form-group mb-4">
           <label class="font-weight-bold">Amenities</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="wifi" name="amenities">
+            <input class="form-check-input" type="checkbox" id="wifi" name="wifi" [(ngModel)]="apartment.amenities.wifi">
             <label class="form-check-label" for="wifi">Wi-Fi</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="parking" name="amenities">
+            <input class="form-check-input" type="checkbox" id="parking" name="parking" [(ngModel)]="apartment.amenities.parking">
             <label class="form-check-label" for="parking">Parking</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="pool" name="amenities">
+            <input class="form-check-input" type="checkbox" id="pool" name="pool" [(ngModel)]="apartment.amenities.pool">
             <label class="form-check-label" for="pool">Swimming Pool</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gym" name="amenities">
+            <input class="form-check-input" type="checkbox" id="gym" name="gym" [(ngModel)]="apartment.amenities.gym">
             <label class="form-check-label" for="gym">Gym</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="ac" name="amenities">
+            <input class="form-check-input" type="checkbox" id="ac" name="ac" [(ngModel)]="apartment.amenities.ac">
             <label class="form-check-label" for="ac">Air Conditioning</label>
           </div>
         </div>
 
-        <!-- Image Upload -->
-        <div class="form-group mb-4">
-          <label for="imageUpload" class="font-weight-bold">Upload Images</label>
-          <input type="file" class="form-control-file" (change)="onFileChange($event)" id="imageUpload" multiple>
-        </div>
-
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
+        <button type="submit" (click)="add()" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
       </form>
     </div>
   </div>
