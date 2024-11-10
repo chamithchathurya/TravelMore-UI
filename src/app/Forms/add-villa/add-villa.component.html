@@ -1,42 +1,62 @@
 <div class="container my-5">
-    <div class="card shadow-lg border-0 rounded">
-      <div class="card-header bg-primary text-white">
-        <h4 class="text-center mb-0">List Your Villa</h4>
-      </div>
-      <div class="card-body p-5">
-        <form>
-          <!-- Common Fields -->
-          <div class="form-group mb-4">
-            <label for="villaName" class="font-weight-bold">Villa Name</label>
-            <input type="text" class="form-control" id="villaName" placeholder="Enter villa name" required>
-          </div>
-          <!-- Unique Villa Fields -->
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="privatePool">
-            <label class="form-check-label" for="privatePool">Private Pool</label>
-          </div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="garden">
-            <label class="form-check-label" for="garden">Garden</label>
-          </div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="oceanView">
-            <label class="form-check-label" for="oceanView">Ocean View</label>
-          </div>
-          <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" id="bbqFacilities">
-            <label class="form-check-label" for="bbqFacilities">BBQ Facilities</label>
-          </div>
-            <!-- Image Upload -->
+  <div class="card shadow-lg border-0 rounded">
+    <div class="card-header bg-primary text-white">
+      <h4 class="text-center mb-0">List Your Hotel</h4>
+    </div>
+    <div class="card-body p-5">
+      <form>
+        <!-- Hotel Name -->
         <div class="form-group mb-4">
-            <label for="imageUpload" class="font-weight-bold">Upload Images</label>
-            <input type="file" class="form-control-file" id="imageUpload" multiple>
+          <label for="apartmentName" class="font-weight-bold">Hotel Name</label>
+          <input type="text" class="form-control" id="apartmentName" name="name" placeholder="Enter hotel name">
+        </div>
+
+        <!-- Description -->
+        <div class="form-group mb-4">
+          <label for="description" class="font-weight-bold">Description</label>
+          <input type="text" class="form-control" id="description" name="description" placeholder="Brief description of the apartment">
+        </div>
+
+        <!-- Price -->
+        <div class="form-group mb-4">
+          <label for="price" class="font-weight-bold">Price per Night</label>
+          <input type="number" class="form-control" id="price" name="price" placeholder="Enter price per night">
+        </div>
+
+        <!-- Location -->
+        <div class="form-group mb-4">
+          <label for="location" class="font-weight-bold">Location</label>
+          <input type="text" class="form-control" id="location" name="location" placeholder="Enter location">
+        </div>
+
+        <!-- Amenities (Checkboxes) -->
+        <div class="form-group mb-4">
+          <label class="font-weight-bold">Amenities</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="wifi" name="wifi">
+            <label class="form-check-label" for="wifi">Wi-Fi</label>
           </div>
-  
-          <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
-        </form>
-      </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="parking" name="parking">
+            <label class="form-check-label" for="parking">Parking</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="pool" name="pool">
+            <label class="form-check-label" for="pool">Swimming Pool</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gym" name="gym">
+            <label class="form-check-label" for="gym">Gym</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ac" name="ac">
+            <label class="form-check-label" for="ac">Air Conditioning</label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
+      </form>
     </div>
   </div>
-  
+</div>
