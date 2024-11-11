@@ -1,0 +1,30 @@
+<div class="container my-5">
+    <div *ngFor="let villa of villaList" class="card hotel-card mb-4">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="assets/Images/pexels-boonkong-boonpeng-442952-1134175.jpg" alt="villa Image">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ villa.name }}</h5>
+            <p class="card-text">{{ villa.description }}</p>
+            <p class="amenities">
+              <strong>Amenities:</strong>
+              <span *ngIf="villa.amenities.wifi">Wi-Fi, </span>
+              <span *ngIf="villa.amenities.pool">Pool, </span>
+              <span *ngIf="villa.amenities.gym">Gym, </span>
+              <span *ngIf="villa.amenities.ac">AC, </span>
+              <span *ngIf="villa.amenities.parking">Parking</span>
+            </p>
+            <p class="price" *ngIf="villa.price">Price: RS.{{ villa.price }} / night</p>
+            <p class="location">
+                <i class="bi bi-geo-alt-fill bg-black"></i> {{ villa.location || 'Location not provided' }}
+            </p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+

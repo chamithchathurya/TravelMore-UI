@@ -1,0 +1,28 @@
+.hotel-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.hotel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.hotel-card .card-body {
+    padding: 20px;
+}
+.hotel-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.hotel-card .amenities, .hotel-card .location {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.hotel-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+}

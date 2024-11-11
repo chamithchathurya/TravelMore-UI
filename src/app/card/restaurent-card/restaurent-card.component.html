@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <div *ngFor="let restaurant of restaurentList" class="card hotel-card mb-4">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="assets/Images/pexels-pixabay-260922.jpg" alt="Restaurants Image">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ restaurant.name }}</h5>
+            <p class="card-text">{{ restaurant.description }}</p>
+            <p class="amenities">
+              <strong>Amenities:</strong>
+              <span *ngIf="restaurant.amenities.wifi">Wi-Fi, </span>
+              <span *ngIf="restaurant.amenities.pool">Pool, </span>
+              <span *ngIf="restaurant.amenities.gym">Gym, </span>
+              <span *ngIf="restaurant.amenities.ac">AC, </span>
+              <span *ngIf="restaurant.amenities.parking">Parking</span>
+            </p>
+            <p class="price" *ngIf="restaurant.price">Price: RS.{{ restaurant.price }} / night</p>
+            <p class="location">
+                <i class="bi bi-geo-alt-fill bg-black"></i> {{ restaurant.location || 'Location not provided' }}
+            </p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

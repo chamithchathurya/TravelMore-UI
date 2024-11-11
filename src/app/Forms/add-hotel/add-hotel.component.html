@@ -5,57 +5,57 @@
     </div>
     <div class="card-body p-5">
       <form>
-        <!-- Hotel Name -->
+        <!-- Apartment Name -->
         <div class="form-group mb-4">
           <label for="apartmentName" class="font-weight-bold">Hotel Name</label>
-          <input type="text" class="form-control" id="apartmentName" name="name" placeholder="Enter hotel name">
+          <input type="text" class="form-control" id="apartmentName" name="name" placeholder="Enter apartment name" [(ngModel)]="hotel.name">
         </div>
 
         <!-- Description -->
         <div class="form-group mb-4">
           <label for="description" class="font-weight-bold">Description</label>
-          <input type="text" class="form-control" id="description" name="description" placeholder="Brief description of the apartment">
+          <input type="text" class="form-control" id="description" name="description" placeholder="Brief description of the apartment" [(ngModel)]="hotel.description">
         </div>
 
         <!-- Price -->
         <div class="form-group mb-4">
           <label for="price" class="font-weight-bold">Price per Night</label>
-          <input type="number" class="form-control" id="price" name="price" placeholder="Enter price per night">
+          <input type="number" class="form-control" id="price" name="price" placeholder="Enter price per night" [(ngModel)]="hotel.price">
         </div>
 
         <!-- Location -->
         <div class="form-group mb-4">
           <label for="location" class="font-weight-bold">Location</label>
-          <input type="text" class="form-control" id="location" name="location" placeholder="Enter location">
+          <input type="text" class="form-control" id="location" name="location" placeholder="Enter location" [(ngModel)]="hotel.location">
         </div>
 
         <!-- Amenities (Checkboxes) -->
         <div class="form-group mb-4">
           <label class="font-weight-bold">Amenities</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="wifi" name="wifi">
+            <input class="form-check-input" type="checkbox" id="wifi" name="wifi" [(ngModel)]="hotel.amenities.wifi">
             <label class="form-check-label" for="wifi">Wi-Fi</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="parking" name="parking">
+            <input class="form-check-input" type="checkbox" id="parking" name="parking" [(ngModel)]="hotel.amenities.parking">
             <label class="form-check-label" for="parking">Parking</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="pool" name="pool">
+            <input class="form-check-input" type="checkbox" id="pool" name="pool" [(ngModel)]="hotel.amenities.pool">
             <label class="form-check-label" for="pool">Swimming Pool</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gym" name="gym">
+            <input class="form-check-input" type="checkbox" id="gym" name="gym" [(ngModel)]="hotel.amenities.gym">
             <label class="form-check-label" for="gym">Gym</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="ac" name="ac">
+            <input class="form-check-input" type="checkbox" id="ac" name="ac" [(ngModel)]="hotel.amenities.ac">
             <label class="form-check-label" for="ac">Air Conditioning</label>
           </div>
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
+        <button type="submit" (click)="add()" class="btn btn-primary btn-block font-weight-bold">Submit Listing</button>
       </form>
     </div>
   </div>

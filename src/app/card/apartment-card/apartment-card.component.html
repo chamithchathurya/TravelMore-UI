@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <div *ngFor="let apartment of apartmentList" class="card hotel-card mb-4">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="assets/Images/pexels-sevenstormphotography-439391.jpg" alt="apartment Image">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ apartment.name }}</h5>
+            <p class="card-text">{{ apartment.description }}</p>
+            <p class="amenities">
+              <strong>Amenities:</strong>
+              <span *ngIf="apartment.amenities.wifi">Wi-Fi, </span>
+              <span *ngIf="apartment.amenities.pool">Pool, </span>
+              <span *ngIf="apartment.amenities.gym">Gym, </span>
+              <span *ngIf="apartment.amenities.ac">AC, </span>
+              <span *ngIf="apartment.amenities.parking">Parking</span>
+            </p>
+            <p class="price" *ngIf="apartment.price">Price: RS.{{ apartment.price }} / night</p>
+            <p class="location">
+                <i class="bi bi-geo-alt-fill bg-black"></i> {{ apartment.location || 'Location not provided' }}
+            </p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

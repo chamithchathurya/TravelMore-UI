@@ -1,21 +1,29 @@
-<div class="container my-5 ">
-    <div class="card hotel-card">
-        <div class="row no-gutters">
-            <!-- Left Side Image -->
-            <div class="col-md-4">
-                <img src="https://via.placeholder.com/250x200" alt="Hotel Image">
-            </div>
-            <!-- Right Side Details -->
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Hotel Sunshine</h5>
-                    <p class="card-text">Experience luxury and comfort at Hotel Sunshine. Enjoy modern amenities, a central location, and scenic views.</p>
-                    <p class="amenities"><strong>Amenities:</strong> Free Wi-Fi, Pool, Spa, Gym</p>
-                    <p class="price">$120 / night</p>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> 123 Main St, Cityville</p>
-                    <a href="#" class="btn btn-primary">Book Now</a>
-                </div>
-            </div>
+<div class="container my-5">
+    <div *ngFor="let hotel of hotelList" class="card hotel-card mb-4">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="assets/Images/pexels-pixabay-258154.jpg" alt="Hotel Image">
         </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ hotel.name }}</h5>
+            <p class="card-text">{{ hotel.description }}</p>
+            <p class="amenities">
+              <strong>Amenities:</strong>
+              <span *ngIf="hotel.amenities.wifi">Wi-Fi, </span>
+              <span *ngIf="hotel.amenities.pool">Pool, </span>
+              <span *ngIf="hotel.amenities.gym">Gym, </span>
+              <span *ngIf="hotel.amenities.ac">AC, </span>
+              <span *ngIf="hotel.amenities.parking">Parking</span>
+            </p>
+            <p class="price" *ngIf="hotel.price">Price: RS.{{ hotel.price }} / night</p>
+            <p class="location">
+                <i class="bi bi-geo-alt-fill bg-black"></i> {{ hotel.location || 'Location not provided' }}
+            </p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
