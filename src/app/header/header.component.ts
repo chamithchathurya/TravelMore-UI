@@ -3,11 +3,14 @@ import { RouterLink } from '@angular/router';
 import { CardComponent } from '../card/card.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgFor } from '@angular/common';
+import { VillaCardComponent } from '../card/villa-card/villa-card.component';
+import { RestaurentCardComponent } from '../card/restaurent-card/restaurent-card.component';
+import { ApartmentCardComponent } from '../card/apartment-card/apartment-card.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink,CardComponent,NgFor,HttpClientModule],
+  imports: [RouterLink,CardComponent,NgFor,HttpClientModule,VillaCardComponent,RestaurentCardComponent,ApartmentCardComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
