@@ -33,5 +33,14 @@ export class HeaderComponent implements OnInit {
       
     })
   }
+  //search form functions
+
+  searchDetails={
+    category:"",
+    location:"",
+    price:0
+  }
+
+  
 
 }
